@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+
+button{
+    font-family: "Torus Notched";
+}
+
+body{
+    overflow-x: hidden;
+    max-width: 1920px;
+
+}
+
+/*----- Header -----*/
+
+header{
+    height: 120px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+header .container{
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .container ul{
+    display: flex;
+}
+
+header .container .onglet{
+    margin-left: -1200px;
+}
+
+header .container ul a{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin: 0 50px;
+}
+
+.logo img{
+    margin-left: 0;
+    margin-right: 0;
+    width: 5%;
+}
+
+@media (max-width: 1500px) {
+    header {
+        position: relative;
+        background-color: white;
+    }
+    header .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+   header .logo{
+    display: none;
+   }
+
+   header .container{
+        justify-content: center;
+    }
+
+    header .container ul a{
+        margin: 0 30px;
+    }
+    header .container .onglet{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+     header .container ul a{
+         margin: 0 10px;
+     }
+ }
+/*----- Section 1 -----*/
+
+@media (min-width: 1500px){
+    .section1{
+        height: 100vh;
+        width: 100%;
+        background-image: url(Img/lamboHome.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .sect1-responsive{
+        display: none;
+    }
+}
+
+.section1 .container{
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section1 h1{
+    color: black;
+    font-size: 8em;
+    margin-bottom: 70px;
+}
+
+.section1 button{
+    position: relative;
+    height: 70px;
+    width: 250px;
+    border-radius: 50px;
+    border: 3px solid black;
+    background-color: white;
+    font-size: 1.2em;
+    z-index: 2;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.section1 button:hover{
+    color: white;
+    width: 280px;
+}
+
+.section1 button::before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 280px;
+    border-radius: 50px;
+    background-color: black;
+    top: -2px;
+    left: -2px;
+    transform: translate(-100%);
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.section1 button:hover::before{
+    transform: translate(0%);
+}
+
+.section1 button i{
+    transform: scale(0);
+    margin: -10px;
+    transition: 0.3;
+}
+
+.section1 button:hover i{
+    transform: scale(1);
+    margin-left: 10px;
+
+}
+
+@media (max-width: 1500px) {
+    .section1 .container{
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .section1{
+        height: 100%;
+        margin-top: 100px;
+    }
+    .sect1-responsive{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .section1 h1{
+        font-size: 6em;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section1 h1{
+        font-size: 4em;
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 500px) {
+    .section1 h1{
+        font-size: 3em;
+    }
+}
+
+/*----- Section 2 -----*/
+
+.section2{
+    background-color: #232323;
+    height: 100vh;
+}
+
+.section2 .container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section2 .titre{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+.content-top, .content-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-top .droite{
+    margin-left: 300px;
+}
+
+.content-bottom .droite{
+    margin-left: 300px;
+}
+
+.section2 {
+    color: white;
+}
+
+.section2 h2 {
+    font-size: 2.5em;
+}
+
+.section2 p {
+    font-size: 1.25em;
+}
+
+.section2 .container .espace{
+    width: 100%;
+    height: 60px;
+}
+
+.content-top img{
+    width: 110%;
+}
+
+.content-bottom img{
+    width: 125%;
+}
+
+.section2 .titre2{
+    display: flex;
+    align-items: center;
+}
+
+.section2 .point{
+    margin: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+/*----- Responsive section 2 -----*/
+/*
+@media (max-width: 1200px) {
+    .content-top .droite{
+        margin-left: 300px;
+    }
+    
+    .content-bottom .droite{
+        margin-left: 300px;
+    }
+
+    .section2 p {
+        font-size: 1em;
+    }
+
+    .content-top, .content-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+*/
+/*----- Section 3 -----*/
+
+.section3{
+    background-color: white;
+    height: 100vh;
+}
+
+.section3 .container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section3 .titre{
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 3em;
+}
+
+.content-top, .content-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-top .droite{
+    margin-left: 300px;
+}
+
+.content-bottom .droite{
+    margin-left: 300px;
+}
+
+.section3 {
+    color: black;
+}
+
+.section3 h2 {
+    font-size: 2.5em;
+}
+
+.section3 p {
+    font-size: 1.25em;
+}
+
+.section3 .container .espace{
+    width: 100%;
+    height: 100px;
+}
+
+.section3 .content-top img{
+    width: 110%;
+}
+
+.section3 .content-bottom img{
+    width: 250%;
+}
+
+.section3 .titre2{
+    display: flex;
+    align-items: center;
+}
+
+.section3 .point{
+    margin: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+
+
+/*----- Section 4 -----*/
+
+.section4{
+    background-color: #232323;
+    height: 100vh;
+}
+
+.section4 {
+    color: white;
+}
+
+.section4 .container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.section4 .titre{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+div#gauche{
+    float: left;
+    width: 50%;
+}
+
+div#droite{
+    width: 50%;
+}
+
+.ecran{
+    width: 100vw;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carte{
+    width: 90%;
+    max-width: 440px;
+    text-align: center;
+    padding: 50px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.carte img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.carte h2{
+    font-size: 2em;
+    font-weight: 1000px bold;
+    margin-top: 20px;
+    color: black;
+}
+
+.carte p{
+    font-size: 1.25em;
+    margin: 10px auto;
+    max-width: 330px;
+    font-weight: bold;
+    color: black;
+}
+
+.carte .reseau img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: background 0.5s;
+}
+
+.carte .reseau img:hover{
+    background: rgb(149, 148, 148);
+}
+
+.bouton{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    padding: 10px 30px;
+    border-radius:  30px;
+    transition: background 0.5s;
+}
+
+.bouton:hover{
+    background: rgb(149, 148, 148);
+}
